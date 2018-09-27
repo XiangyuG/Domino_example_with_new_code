@@ -21,7 +21,7 @@ void func(struct Packet p) {
     p.cond1 = p.now + QMAX;
 // Run when link goes idle (lower priority?)
     if (p.now_plus_free > last_update &&
-	((p.len>=1) && (p.cond1>=5) && (p.loss>=0))){
+	((p.qlen>=1) && (p.cond1>=5) && (p.loss>=0))){
       p_mark = p_mark - DELTA2;
       last_update = p.now;
     } 
