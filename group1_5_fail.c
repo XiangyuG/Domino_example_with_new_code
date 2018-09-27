@@ -20,7 +20,7 @@ void func(struct Packet p) {
     p.qlen = p.now + DELTA1;
     p.cond1 = p.now + QMAX;
     if (p.now_plus_free > last_update)
-        if (p.len>=1)
+        if (p.qlen>=1)
                 if (p.cond1>=5)
                         if (p.loss>=0){
       p_mark = p_mark - DELTA2;
