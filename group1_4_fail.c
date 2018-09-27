@@ -23,5 +23,4 @@ void func(struct Packet p) {
         p_mark = p_mark - DELTA2;
         last_update = p.now;
     }
-}
-~   
+}  
