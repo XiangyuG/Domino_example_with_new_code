@@ -19,7 +19,7 @@ void func(struct Packet p) {
     p.now_plus_free = p.now - FREEZE_TIME;      
     p.qlen = p.now + DELTA1;
     p.cond1 = p.now + QMAX;
-    if (p.len>=1 && p.cond1>=5 &&p.loss>=0 && p.now_plus_free > last_update){
+    if (p.qlen>=1 && p.cond1>=5 &&p.loss>=0 && p.now_plus_free > last_update){
       p_mark = p_mark - DELTA2;
       last_update = p.now;
     } 
