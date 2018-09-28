@@ -1,4 +1,4 @@
-include "muxes.sk"
+include "muxes.sk";
 include "rel_ops.sk";
 include "constants.sk";
 include "arith_ops.sk";
