@@ -30,7 +30,7 @@ void func(struct Packet dns) {
   // If this domain name (qname) + IP pair (rdata) has not been seen before
 
   if (domain_ip_pair[dns.dip_index] == 0){
-	if (num_of_domains[dns.rdata] + 1 == 10){
+	if (num_of_domains[dns.rdata] + 1 == THRESHOLD){
 		mal_ip_list[dns.rdata] = 1;
 		num_of_domains[dns.rdata] = num_of_domains[dns.rdata] + 1;
 		domain_ip_pair[dns.dip_index] = 1;
